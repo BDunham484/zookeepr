@@ -1,0 +1,24 @@
+{
+  "name": "zookeepr",
+  "version": "1.0.0",
+  "description": "Classwork:  A web server for a fictional front-end application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BDunham484/zookeepr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BDunham484/zookeepr/issues"
+  },
+  "homepage": "https://github.com/BDunham484/zookeepr#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
