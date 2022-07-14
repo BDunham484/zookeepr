@@ -2,22 +2,20 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-
+//route that front-end can request data from
+const { animals } = require('./data/animals');
 
 //set environment variable
 const PORT = process.env.PORT || 3001;
 //instantiate the server
 const app = express();
-//route that front-end can request data from
-const { animals } = require('./data/animals');
 
 
 
 
-
-//parse incoming string or array data
+// parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
-//parse incoming JSON data
+// parse incoming JSON data
 app.use(express.json());
 //make all files in public directory static resources
 app.use(express.static('public'));
@@ -148,7 +146,7 @@ app.post('/api/animals', (req, res) => {
         //add animal to json file and animals array in this function
     const animal = createNewAnimal(req.body, animals);
     //req.body is where our incoming content wil be
-    // console.log(req.body);
+    console.log(req.body);
     // res.json(req.body);
     res.json(animal);
     }
