@@ -19,6 +19,8 @@ const { animals } = require('./data/animals');
 app.use(express.urlencoded({ extended: true }));
 //parse incoming JSON data
 app.use(express.json());
+//make all files in public directory static resources
+app.use(express.static('public'));
 
 
 
@@ -123,6 +125,14 @@ app.get('/api/animals/:id', (req, res) => {
         res.sendStatus(404);
     }
 });
+
+
+
+
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+})
 
 
 
