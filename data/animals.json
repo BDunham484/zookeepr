@@ -144,6 +144,36 @@
         "hungry"
       ],
       "id": "14"
+    },
+    {
+      "name": "Barbara",
+      "species": "lemur",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry",
+        "zany"
+      ],
+      "id": "15"
+    },
+    {
+      "name": "Deborah",
+      "species": "Sloth",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry",
+        "zany"
+      ],
+      "id": "16"
+    },
+    {
+      "name": "Glenn",
+      "species": "toad",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "loving",
+        "goofy"
+      ],
+      "id": "17"
     }
   ]
 }

@@ -90,7 +90,7 @@ function validateAnimal(animal) {
     if (!animal.species || typeof animal.species !== 'string') {
         return false;
     }
-    if (!animal.det || typeof animal.diet !== 'string') {
+    if (!animal.diet || typeof animal.diet !== 'string') {
         return false;
     }
     if (!animal.personalityTraits || !Array.isArray(animal.personalityTraits)) {
@@ -135,6 +135,26 @@ app.get('/', (req, res) => {
 
 
 
+app.get('/animals', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+
+
+
+app.get('/zookeepers', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/zookeepers.html'))
+});
+
+
+
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+
+
 
 app.post('/api/animals', (req, res) => {
     //set id based on what the next index of the array will be
@@ -146,12 +166,15 @@ app.post('/api/animals', (req, res) => {
         //add animal to json file and animals array in this function
     const animal = createNewAnimal(req.body, animals);
     //req.body is where our incoming content wil be
-    console.log(req.body);
+    // console.log(req.body);
     // res.json(req.body);
     res.json(animal);
     }
     
 });
+
+
+
 
 
 
